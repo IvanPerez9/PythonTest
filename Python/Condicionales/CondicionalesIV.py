@@ -26,6 +26,8 @@ else:
     print("No tienes derecho a beca")
 
 ########################################
+### Para quitar el case sensitive con funciones LOWER y UPPER 
+# tener otra variable intermediaria que me lo transforme siempre 
 
 def operadorIN():
     print("Asignaturas optativas")
