@@ -16,3 +16,35 @@ for i in ["primavera", "verano", "Otono", "invierno"]:
 
 for i in ["primavera", "verano", "Otono", "invierno"]:
     print(i)
+
+# Bucles II 
+
+for i in ["primavera", "verano", "Otono", "invierno"]:
+    print(i , end="")
+
+email = False;
+for i in "ivan120695@gmail.com":
+    if (i == "@"):
+        email=True
+
+if email == True:
+    print("Email correcto")
+else:
+    print("Email incorrecto")
+    
+##############
+
+contador=0;
+email = False;
+nick = input("Introduce tu email: ")
+for i in nick:
+    if (i == "@" or i=="."):
+        contador= contador + 1; # Debe valer 2 para que este bien
+
+if contador == 2:
+    print("Email correcto")
+else:
+    print("Email incorrecto")
+    
+    
+    
