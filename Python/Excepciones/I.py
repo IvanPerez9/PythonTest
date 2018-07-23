@@ -24,8 +24,14 @@ def divide (num1,num2):
         print("No se puede divir entre cero")
         return "Operacion erronea"
 
-op1 = (int(input("Introduce el primer operando: ")))
-op2 = (int(input("Introduce el segundo operando: ")))
+#Bucle infinito
+while True:
+    try:
+        op1 = (int(input("Introduce el primer operando: ")))
+        op2 = (int(input("Introduce el segundo operando: ")))
+        break;
+    except ValueError:
+        print("Los valores introducidos no son correctos, intentalo de nuevo ")
 
 operacion = input("Que operacion deseas realizar (suma, resta, multiplica, divide): ")
 
