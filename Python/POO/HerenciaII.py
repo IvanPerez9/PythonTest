@@ -45,10 +45,12 @@ class Moto (Vehiculos): #Asi hereda
         self.hcaballito = "Voy haciendo el caballito"
     
     def estado(self):
-        Vehiculos.estado(self) # Se hereda con todo a la vez, copiar y pegar , ¿  No super ? 
+        super().estado() # Se hereda con todo a la vez, copiar y pegar ,   No super ? 
+        print("Caballito: " ,self.hcaballito)
 
-class Velectricos ():
-    def __init__ (self):
+class Velectricos (Vehiculos):
+    def __init__ (self,marca,modelo):
+        super().__init__(marca,modelo);
         self.autonomia = 100;
         
     def cargarEnergia (self):
@@ -63,9 +65,10 @@ miFurgoneta.arrancar();
 miFurgoneta.estado();
 print(miFurgoneta.carga(True))
 
-class BicicletaE (Vehiculos, Velectricos): #Hereda de 2 , se da preferencia al primero
+class BicicletaE (Velectricos, Vehiculos): #Hereda de 2 , se da preferencia al primero
     
     pass; 
 
-miBici = BicicletaE();
+miBici = BicicletaE("Orbea", "CDR");
+miBici.estado()
 
